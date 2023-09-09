@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+<body>
+    <section class="header" id="header">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="#">BMW</a>                      
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" class="active">Model</a></li>
+                    <li><a href="#">Book a Test Drive</a></li>
+                    <li><a href="#">Build Your Own</a></li>
+                    <li><a href="#">Find a Dealer</a></li>
+                    <li><a href="#">More BMW</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <ul>
+                    <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                    <li><a href="#"><i class='bx bxl-meta' ></i></a></li>
+                    <li><a href="#"><i class='bx bxl-instagram' ></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="row">
+               <div class="left-sec">
+                <div class="content">
+                    <h2><span>M5 Competition</span></h2>
+                    <p></p>
+                </div>
+                <button class="discover-btn">
+                    <a href="#">Book now</a><sapn><i class='bx bxs-right-arrow-circle'></i></sapn>
+                </button>
+                <diV class="information">
+                <div class="production">
+                    <p>Production</p>
+                    <h2>2017-2023</h2>
+                </div>
+                <div class="production">
+                    <p>Body </p>
+                    <h2>4-door sedan</h2>
+                </div>
+                <div class="production">
+                    <p>Powertrain</p>
+                    <h2>4.4.L S63 twin-turbo </h2>
+                </div>
+                </diV>
+               </div> 
+               <div class="right-sec">
+                <div class="my-car">
+                    <div> <img src="images/background.jpg"></div>
+                    <div> <img src="images/m2.jpg"></div>
+                    <div> <img src="images/m3.jpg"></div>
+                    <div> <img src="images/m4.jpg"></div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+           $(".my-car").slick({
+                autoplay:true,
+                dots:true,
+                speed:1000,
+                custoPaging : function(slider, i){
+                    var thumb = $ (slider.$slider[i]).data();
+                    return '<a>'+(i+1)+'<a>';
+                },
+           }) 
+        });
+    </script>
+
+</body>
+</html>
